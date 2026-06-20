@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Employee App</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+<h1>Employee Management System</h1>
+
+<input type="text"
+       id="name"
+       placeholder="Enter Employee Name">
+
+<button onclick="saveEmployee()">
+    Save
+</button>
+
+<button onclick="loadEmployees()">
+    View Employees
+</button>
+
+<ul id="employeeList"></ul>
+
+<script src="{{ url_for('static',
+filename='script.js') }}"></script>
+
+</body>
+</html>
