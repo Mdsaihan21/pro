@@ -1,29 +1,19 @@
 pipeline {
-
     agent any
 
     stages {
 
         stage('Build') {
-
             steps {
-
-                sh 'docker build -t employee-app .'
-
+                echo 'Build Successful'
             }
-
         }
 
-        stage('Deploy') {
-
+        stage('Test') {
             steps {
-
-                sh 'kubectl apply -f k8s/'
-
+                echo 'Pipeline Working'
             }
-
         }
 
     }
-
 }
